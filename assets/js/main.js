@@ -1,16 +1,16 @@
 /**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Nome do Template: iPortfolio
+* URL do Template: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+* Atualizado: 29 de Junho de 2024 com Bootstrap v5.3.3
+* Autor: BootstrapMade.com
+* Licença: https://bootstrapmade.com/license/
 */
 
 (function() {
   "use strict";
 
   /**
-   * Header toggle
+   * Alternar visibilidade do cabeçalho
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
 
@@ -22,7 +22,7 @@
   headerToggleBtn.addEventListener('click', headerToggle);
 
   /**
-   * Hide mobile nav on same-page/hash links
+   * Esconder navegação móvel em links de mesma página/hash
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
@@ -30,11 +30,10 @@
         headerToggle();
       }
     });
-
   });
 
   /**
-   * Toggle mobile nav dropdowns
+   * Alternar dropdowns da navegação móvel
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
@@ -56,7 +55,7 @@
   }
 
   /**
-   * Scroll top button
+   * Botão de rolar para o topo
    */
   let scrollTop = document.querySelector('.scroll-top');
 
@@ -77,7 +76,7 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
-   * Animation on scroll function and init
+   * Função de animação ao rolar e inicialização
    */
   function aosInit() {
     AOS.init({
@@ -90,7 +89,7 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Init typed.js
+   * Inicializar typed.js
    */
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
@@ -106,12 +105,12 @@
   }
 
   /**
-   * Initiate Pure Counter
+   * Iniciar Pure Counter
    */
   new PureCounter();
 
   /**
-   * Animate the skills items on reveal
+   * Animar os itens de habilidades ao revelar
    */
   let skillsAnimation = document.querySelectorAll('.skills-animation');
   skillsAnimation.forEach((item) => {
@@ -128,14 +127,14 @@
   });
 
   /**
-   * Initiate glightbox
+   * Iniciar glightbox
    */
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
   /**
-   * Init isotope layout and filters
+   * Inicializar layout e filtros do isotope
    */
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
@@ -168,7 +167,7 @@
   });
 
   /**
-   * Init swiper sliders
+   * Inicializar sliders do swiper
    */
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
@@ -187,7 +186,7 @@
   window.addEventListener("load", initSwiper);
 
   /**
-   * Correct scrolling position upon page load for URLs containing hash links.
+   * Corrigir posição de rolagem ao carregar a página para URLs contendo links de hash.
    */
   window.addEventListener('load', function(e) {
     if (window.location.hash) {
@@ -205,7 +204,7 @@
   });
 
   /**
-   * Navmenu Scrollspy
+   * Scrollspy do menu de navegação
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
@@ -226,4 +225,22 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  
 })();
+
+/**
+ * headerToggle: Alterna a visibilidade do cabeçalho e muda o ícone do botão.
+ * Esconder navegação móvel: Esconde a navegação móvel ao clicar em links de mesma página/hash.
+ * Alternar dropdowns da navegação móvel: Alterna a visibilidade dos dropdowns na navegação móvel.
+ * Preloader: Remove o preloader quando a página é carregada.
+ * toggleScrollTop: Mostra ou esconde o botão de rolar para o topo com base na posição de rolagem.
+ * aosInit: Inicializa a animação ao rolar (AOS).
+ * Init typed.js: Inicializa o efeito de digitação automática.
+ * Iniciar Pure Counter: Inicializa o contador puro.
+ * Animar habilidades: Anima as barras de progresso das habilidades ao serem reveladas.
+ * Iniciar glightbox: Inicializa o lightbox para imagens.
+ * Inicializar isotope: Configura o layout e filtros do isotope.
+ * initSwiper: Inicializa os sliders do swiper.
+ * Corrigir posição de rolagem: Corrige a posição de rolagem ao carregar a página com links de hash.
+ * navmenuScrollspy: Atualiza os links ativos do menu de navegação com base na posição de rolagem.
+ */
