@@ -1,11 +1,3 @@
-/**
-* Nome do Template: iPortfolio
-* URL do Template: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Atualizado: 29 de Junho de 2024 com Bootstrap v5.3.3
-* Autor: BootstrapMade.com
-* Licença: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
@@ -225,22 +217,17 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  
-})();
+  /**
+   * Ajustar a altura da seção Hero para cobrir toda a viewport
+   */
+  function setHeroHeight() {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+      hero.style.height = window.innerHeight + 'px';
+    }
+  }
 
-/**
- * headerToggle: Alterna a visibilidade do cabeçalho e muda o ícone do botão.
- * Esconder navegação móvel: Esconde a navegação móvel ao clicar em links de mesma página/hash.
- * Alternar dropdowns da navegação móvel: Alterna a visibilidade dos dropdowns na navegação móvel.
- * Preloader: Remove o preloader quando a página é carregada.
- * toggleScrollTop: Mostra ou esconde o botão de rolar para o topo com base na posição de rolagem.
- * aosInit: Inicializa a animação ao rolar (AOS).
- * Init typed.js: Inicializa o efeito de digitação automática.
- * Iniciar Pure Counter: Inicializa o contador puro.
- * Animar habilidades: Anima as barras de progresso das habilidades ao serem reveladas.
- * Iniciar glightbox: Inicializa o lightbox para imagens.
- * Inicializar isotope: Configura o layout e filtros do isotope.
- * initSwiper: Inicializa os sliders do swiper.
- * Corrigir posição de rolagem: Corrige a posição de rolagem ao carregar a página com links de hash.
- * navmenuScrollspy: Atualiza os links ativos do menu de navegação com base na posição de rolagem.
- */
+  window.addEventListener('resize', setHeroHeight);
+  window.addEventListener('load', setHeroHeight);
+
+})();
